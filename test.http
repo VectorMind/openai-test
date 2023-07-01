@@ -1,3 +1,5 @@
+
+#https://platform.openai.com/docs/api-reference
 @apikey={{$dotenv OPENAI_API_KEY}}
 @org={{$dotenv OPENAI_ORG}}
 @base_url=https://api.openai.com/v1
@@ -15,4 +17,52 @@ Content-Type: application/json
     "model": "gpt-3.5-turbo",
     "messages": [{"role": "user", "content": "Say this is a test!"}],
     "temperature": 0.7
+}
+
+### test chat with system role
+post {{base_url}}/chat/completions
+Authorization: Bearer {{apikey}}
+Content-Type: application/json
+
+{
+  "model": "gpt-3.5-turbo",
+  "messages": [
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Hello!"}
+    ]
+}
+
+### test completion
+post {{base_url}}/completions
+Authorization: Bearer {{apikey}}
+Content-Type: application/json
+
+{
+    "model": "text-davinci-003",
+    "prompt": "Say this is a test",
+    "max_tokens": 7,
+    "temperature": 0
+}
+
+
+### test edits
+post {{base_url}}/edits
+Authorization: Bearer {{apikey}}
+Content-Type: application/json
+
+{
+    "model": "text-davinci-edit-001",
+    "input": "What day of the wek is it?",
+    "instruction": "Fix the spelling mistakes"
+}
+
+### images
+post {{base_url}}/images/generations
+Authorization: Bearer {{apikey}}
+Content-Type: application/json
+
+{
+    "prompt": "A cute baby sea otter",
+    "n": 2,
+    "size": "1024x1024"
 }
