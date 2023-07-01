@@ -1,0 +1,18 @@
+@apikey={{$dotenv OPENAI_API_KEY}}
+@org={{$dotenv OPENAI_ORG}}
+@base_url=https://api.openai.com/v1
+### test
+get {{base_url}}/models
+Authorization: Bearer {{apikey}}
+OpenAI-Organization: {{org}}
+
+### test chat
+post {{base_url}}/chat/completions
+Authorization: Bearer {{apikey}}
+Content-Type: application/json
+
+{
+    "model": "gpt-3.5-turbo",
+    "messages": [{"role": "user", "content": "Say this is a test!"}],
+    "temperature": 0.7
+}
