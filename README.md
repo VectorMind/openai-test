@@ -1,5 +1,7 @@
 # openai API reference
-https://platform.openai.com/docs/api-reference
+- https://platform.openai.com/docs
+- https://platform.openai.com/docs/api-reference
+- https://github.com/openai/openai-cookbook
 
 # openai-test
 checking default open ai API examples
