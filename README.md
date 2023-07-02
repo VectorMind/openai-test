@@ -2,6 +2,8 @@
 - https://platform.openai.com/docs
 - https://platform.openai.com/docs/api-reference
 - https://github.com/openai/openai-cookbook
+- https://github.com/openai/openai-python
+- https://github.com/openai/openai-python/blob/main/chatml.md
 
 # openai-test
 checking default open ai API examples
