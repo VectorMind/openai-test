@@ -1,4 +1,4 @@
-# openai API reference
+# openai references
 - https://platform.openai.com/docs
 - https://platform.openai.com/docs/api-reference
 - https://github.com/openai/openai-cookbook
