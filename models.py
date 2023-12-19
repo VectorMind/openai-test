@@ -1,13 +1,11 @@
 import os
-import openai
+from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
-openai.organization = os.getenv("OPENAI_ORG")
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
-models = openai.Model.list()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-for model in models["data"]:
-    print(model["id"])
-
+models = client.models.list()
+for model in models:
+    print(model.id)
