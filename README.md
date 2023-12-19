@@ -1,5 +1,9 @@
-# openai API reference
+# Openai references
+https://github.com/orgs/VectorMind/discussions/4
+
+## openai API reference
 https://platform.openai.com/docs/api-reference
+
 
 # openai-test
 checking default open ai API examples
